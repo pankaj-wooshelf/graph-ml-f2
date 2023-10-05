@@ -1,0 +1,273 @@
+/* App.css */
+
+/* Style for the main container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Background color for the entire app */
+}
+
+/* Style for the 3D force graph */
+.react-force-graph {
+  width: 800px; /* Adjust the width as needed */
+  height: 600px; /* Adjust the height as needed */
+  border: 1px solid #ccc;
+}
+
+/* Style for the isolate overlay */
+.isolate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.isolate-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Style for the node info panel */
+.node-info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+  padding: 20px;
+  max-width: 300px;
+  width: 300px;
+  /* height: 80px; */
+
+}
+
+.node-info h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.node-info p {
+  font-size: 16px;
+  color: blue;
+}
+
+.linked-nodes h3 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.linked-nodes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.linked-nodes li {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.all-nodes-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Style for the back button in isolate content */
+.isolate-content button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.isolate-content button:hover {
+  background-color: darkblue;
+}
+.node-info-content{
+  background-color: #fff;
+  border-radius: 5px;
+}
+.node-info-content h3{
+  padding: 0 10px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.node-info-content h2{
+  padding: 0 10px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.node-info-content p{
+  padding: 0 10px;
+}
+.node-info-content ul{
+  padding: 0 10px;
+  list-style-type: none;
+}
+.filter-container .filter-select__control .filter-select__dropdown-indicator {
+  display: none !important;
+}
+.graph-labels{
+  position: absolute;
+  top:30px;
+  right: 10px;
+  padding: 10px;
+  width: 200px;
+}
+.graph-labels ul{
+  list-style-type: none;
+}
+.graph-labels p{
+  border-radius: 40px;
+  padding: 10px 20px;
+}
+.graph-labels p.filterCount{
+  background-color: #9a969a;
+}
+
+
+.graph-labels p.filterCountBol{
+  background-color:Aqua;
+}
+.graph-labels p.filterCountAll{
+  background-color: #ffff40;
+}
+.graph-labels p.filterCountBat{
+  background-color: #ffc240;
+}
+.graph-labels p.filterCountWik{
+  background-color: blue;
+}
+.graph-labels p.filterCountIpl{
+  background-color: #ff8f8f;
+}
+.graph-labels p.filterCountRet{
+  background-color: gray;
+  /* border-style: 10px;
+  border-color: black; */
+}
+
+
+.graph-labels p.TeamMate{
+  background-color:red;
+}
+
+.graph-labels p.FilteredTeamMate{
+  background-color: #40ff40;
+}
+
+.graph-labels p.clickedCount{
+  background-color: #ff1010;
+}
+.graph-labels p.clickedFilterCount{
+  background-color: #40ff40;
+}
+.filter-container{
+  background-color: #fff;
+  padding: 10px;
+}
+/* For Webkit-based browsers (Chrome, Safari) */
+/* Thin scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Adjust the width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Set a background color for the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Set a background color for the scrollbar handle */
+}
+
+/* For Mozilla-based browsers (Firefox) */
+/* Thin scrollbar */
+scrollbar-width: thin;
+scrollbar-color: #888 #f1f1f1; /* Set handle and track colors */
+
+
+
+/* Range Input Container */
+.range-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+/* Custom Range Input Styles */
+.custom-range-input {
+  -webkit-appearance: none; /* Remove default styles (Chrome, Safari) */
+  width: 100%;
+  height: 5px;
+  background: #ddd; /* Background color of the track */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove default focus styles */
+}
+
+.custom-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styles (Chrome, Safari) */
+  width: 20px;
+  height: 20px;
+  background: #007BFF; /* Color of the thumb */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Rounded shape */
+  cursor: pointer;
+}
+
+.custom-range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007BFF;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Custom styles for the thumb when active (clicked and dragged) */
+.custom-range-input::-webkit-slider-thumb:active,
+.custom-range-input::-moz-range-thumb:active {
+  background: #0056b3;
+}
+
+.filtered-list li{
+      display: block;
+      color: black;
+      padding: 4px 0;
+      listStyle: decimal inside;
+      fontSize: 12px;
+    }
+
+/* Right side styles */
+.right-side {
+  width: 70%; /* Adjust the width as needed */
+  padding: 20px;
+  box-sizing: border-box;
+  float: right; /* Float it to the right */
+}
+
+/* Left side styles */
+.left-side {
+  width: 30%; /* Adjust the width as needed */
+  padding: 20px;
+  box-sizing: border-box;
+  float: left; /* Float it to the left */
+}
