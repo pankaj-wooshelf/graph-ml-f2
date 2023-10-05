@@ -6,7 +6,7 @@ import Select from 'react-select'
 // import { graphDatas } from './Data/testData'
 
 const App = () => {
-  const graphDatas = {
+const graphDatas = {
     nodes: [
       {
         id: 'AnilKumble',
@@ -14,13 +14,22 @@ const App = () => {
         period: '1990 - 2008',
         role: 'Bowler',
         is_ipl: ' true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '956',
+        totalMatchPlayed: '1027',
+        description:
+          'Anil Kumble is an Indian former cricket captain, coach and commentator who played Test and One Day International cricket for his national team over an international career of 18 years.'
       },
       {
         id: 'VVSLaxman',
         label: 'VVS Laxman',
         period: '2000 - 2005',
-        role: 'Batsman'
+        role: 'Batsman',
+        is_retired: 'true',
+        totalWicket: '2',
+        totalMatchPlayed: '220',
+        description:
+          'Vangipurapu Venkata Sai Laxman is a former Indian international cricketer and a former cricket commentator and pundit. A right-hand batsman known for his elegant stroke play, Laxman played as a middle-order batsman in Test cricket.'
       },
       {
         id: 'SachinTendulkar',
@@ -28,7 +37,11 @@ const App = () => {
         period: '1989-2013',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '200',
+        totalMatchPlayed: '663',
+        description:
+          'Sachin Ramesh Tendulkar, is an Indian former international cricketer who captained the Indian national team. He is widely regarded as one of the greatest batsmen in the history of cricket. He is the all-time highest run-scorer in both ODI and Test cricket with more than 18,000 runs and 15,000 runs, respectively.'
       },
       {
         id: 'SouravGanguly',
@@ -36,15 +49,23 @@ const App = () => {
         period: '1992-2008',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '132',
+        totalMatchPlayed: '424',
+        description:
+          "Sourav Chandra Ganguly, also known as Dada, is an Indian cricket commentator and former cricketer. He is popularly called as Maharaja of Indian Cricket. He was captain of the Indian national cricket team and known as one of India's most successful cricket captains."
       },
       {
         id: 'RahulDravid',
         label: 'Rahul Dravid',
         period: '1996-2012',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '5',
+        totalMatchPlayed: '508',
+        description:
+          "Rahul Sharad Dravid is an Indian cricket coach and former captain of the Indian national team, currently serving as its head coach. Prior to his appointment to the senior men's national team, Dravid was the Head of Cricket at the National Cricket Academy, and the head coach of the India Under-19 and India A teams"
       },
       {
         id: 'HarbhajanSingh',
@@ -52,16 +73,24 @@ const App = () => {
         period: '1998-2016',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '686',
+        totalMatchPlayed: '339',
+        description:
+          'Harbhajan Singh is an Indian politician, film actor, Television Celebrity and former cricketer. He serves as a member of parliament in Rajya Sabha, and is a retired cricketer and a cricket commentator. Harbhajan played for the Indian national cricket team from 1998 - 2016 in a career spanning nearly two decades.'
       },
-
+  
       {
         id: 'JavagalSrinath',
         label: 'javagal srinath',
         period: '1991-2003',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '551',
+        totalMatchPlayed: '406',
+        description:
+          "Javagal Srinath, is a former Indian cricketer and currently an ICC match referee. He is considered among India's finest fast bowlers, and was the first Indian fast bowler to take more than 300 wickets in One Day Internationals."
       },
       {
         id: 'VirenderSehwag',
@@ -69,15 +98,23 @@ const App = () => {
         period: '1999 - 2013',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '136',
+        totalMatchPlayed: '355',
+        description:
+          'Virender Sehwag is a former Indian cricketer who represented India from 1999 to 2013. Widely regarded as one of the most destructive openers, he played for Delhi Capitals in IPL and Delhi and Haryana in Indian domestic cricket.'
       },
       {
         id: 'MSDhoni',
         label: 'M.S. Dhoni',
         period: '2004 - 2020',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '1',
+        totalMatchPlayed: '440',
+        description:
+          'Mahendra Singh Dhoni is a former Indian cricketer who played as a wicket-keeper-batsman. He was the captain of the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. He currently plays for and captains Chennai Super Kings in the Indian Premier League.'
       },
       {
         id: 'SureshRaina',
@@ -85,7 +122,11 @@ const App = () => {
         period: '2005 - 2020',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '49',
+        totalMatchPlayed: '244',
+        description:
+          "Suresh Raina is an Indian former international cricketer. He occasionally served as stand-in captain for Indian men's national cricket team as well as in IPL for Chennai Super Kings during the absence of the main captain. He played for Uttar Pradesh in domestic cricket circuit."
       },
       {
         id: 'GautamGambhir',
@@ -93,7 +134,11 @@ const App = () => {
         period: '2003 - 2016',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '205',
+        description:
+          "Gautam Gambhir is an Indian politician, philanthropist and former cricketer, who has played all formats of the game. He played an integral role in India's win in two ICC Knock-outs. He is a current member of the Lok Sabha since 2019. "
       },
       {
         id: 'ViratKohli',
@@ -101,7 +146,11 @@ const App = () => {
         period: '2008 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '4',
+        totalMatchPlayed: '390',
+        description:
+          'virat Kohli is an Indian international cricketer and the former captain of the Indian national cricket team who plays for Royal Challengers Bangalore in the IPL and Delhi in domestic cricket.'
       },
       {
         id: 'AjinkyaRahane',
@@ -109,7 +158,11 @@ const App = () => {
         period: '2011 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '173',
+        description:
+          'Ajinkya Madhukar Rahane is an Indian international cricketer and former captain and current vice-captain of Indian team in test format, who has played for Indian cricket team in all formats as a batsman. He currently captains Mumbai in Ranji trophy. He is also currently playing for Chennai Super Kings in the IPL.'
       },
       {
         id: 'RohitSharma',
@@ -117,7 +170,11 @@ const App = () => {
         period: '2007 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '10',
+        totalMatchPlayed: '300',
+        description:
+          'Rohit Gurunath Sharma, is an Indian international cricketer and the current captain of India men’s cricket team in all formats. Considered one of the best batsmen of his generation and one of greatest opening batters of all time, Sharma is known for his timing, elegance, six-hitting abilities and leadership skills.'
       },
       {
         id: 'ShikharDhawan',
@@ -125,7 +182,11 @@ const App = () => {
         period: '2010 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '221',
+        description:
+          'Shikhar Dhawan is an Indian cricketer. A left-handed opening batsman, he captains Punjab Kings in the Indian Premier League and plays for Delhi in first-class cricket. At the 2013 Champions Trophy, 2015 World Cup, and 2017 Champions Trophy, Dhawan was the leading run-scorer for India.'
       },
       {
         id: 'KL_Rahul',
@@ -133,7 +194,11 @@ const App = () => {
         period: '2014 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '105',
+        description:
+          'Kananur Lokesh Rahul is an Indian international cricketer who plays as a right-handed Wicketkeeper-Batsman for Karnataka at the domestic level and is the captain for Lucknow Super Giants in the Indian Premier League. He is a former vice-captain of the Indian Cricket Team'
       },
       {
         id: 'HardikPandya',
@@ -141,7 +206,11 @@ const App = () => {
         period: '2016 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '93',
+        totalMatchPlayed: '92',
+        description:
+          'Hardik Himanshu Pandya is an Indian cricketer who is the current vice-captain of the Indian cricket team in limited overs format. A batting all-rounder who can also bowl right-arm fast-medium deliveries, Pandya has represented India in all 3 formats.'
       },
       // player
       {
@@ -150,15 +219,23 @@ const App = () => {
         period: '1999-2000',
         role: 'Batsman',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '7',
+        description:
+          'Devang Jayant Gandhi is a former Indian cricketer. He was a right-handed opening batsman and a very occasional right-arm medium-pace bowler. He played for Bengal, Hadleigh and Thundersley Cricket Club, Essex. '
       },
       {
         id: 'SameerDighe',
         label: 'Sameer Dighe',
         period: '2000-2001',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '29',
+        description:
+          'Sameer Dighe is a former Indian cricketer, cricket coach & entrepreneur. He was a right-handed batsman and a wicket-keeper. His main chance at international cricket did not come until the 1999–2000 season, at which time he was 31 years of age. '
       },
       {
         id: 'SridharanSriram',
@@ -166,7 +243,11 @@ const App = () => {
         period: '2000-2004',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '88',
+        totalMatchPlayed: '141',
+        description:
+          'Sridharan Sriram is an Indian cricket coach and former cricketer. He is a left-handed batsman and a left-arm orthodox spin bowler. '
       },
       {
         id: 'HemangBadani',
@@ -174,7 +255,11 @@ const App = () => {
         period: '2001-2004',
         role: 'Batsman',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '3',
+        totalMatchPlayed: '44',
+        description:
+          'Hemang Kamal Badani is a former Indian Cricketer, who played for the Tamil Nadu and Vidarbha cricket teams. He also captained the Tamil Nadu cricket team.'
       },
       {
         id: 'AmitBhandari',
@@ -182,15 +267,23 @@ const App = () => {
         period: '2000-2004',
         role: 'Bowler',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '12',
+        totalMatchPlayed: '56',
+        description:
+          'Amit Bhandari is an Indian cricketer. Having made an forgettable debut in 2000, his performances in the 2001–02 season kept him within striking distance of being re-selected. '
       },
       {
         id: 'VijayDahiya',
         label: 'Vijay Dahiya',
         period: '2000-2001',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '21',
+        description:
+          'Vijay Dahiya is a former Indian wicketkeeper. He is currently coach of the Uttar Pradesh cricket team and assistant coach of Lucknow Super Giants in Indian Premier League.'
       },
       {
         id: 'ZaheerKhan',
@@ -198,7 +291,11 @@ const App = () => {
         period: '2000 - 2014',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '593',
+        totalMatchPlayed: '292',
+        description:
+          'Zaheer Khan is an Indian former professional cricketer who played all forms of the game for the Indian national team from 2000 till 2014. He is a fast-medium left-arm bowler. He was the second-most successful Indian pace bowler in Test cricket, behind Kapil Dev.'
       },
       {
         id: 'YuvrajSingh',
@@ -206,7 +303,11 @@ const App = () => {
         period: '2000 - 2017',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '121',
+        totalMatchPlayed: '344',
+        description:
+          'Yuvraj Singh is a former Indian international cricketer who played in all formats of the game. He is an all-rounder who batted left-handed in the middle order and bowled slow left-arm orthodox.'
       },
       {
         id: 'ReetinderSinghSodhi',
@@ -214,7 +315,11 @@ const App = () => {
         period: '2000-2002',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '',
+        totalMatchPlayed: '',
+        description:
+          'Reetinder Singh Sodhi pronunciation is a former Indian cricketer. He was an all-rounder from Punjab and was one of the options that Indian selectors had while looking for an allrounder. '
       },
       {
         id: 'DineshMongia',
@@ -222,7 +327,11 @@ const App = () => {
         period: '2001-2007',
         role: 'All-Rounder',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '14',
+        totalMatchPlayed: '58',
+        description:
+          'Dinesh Mongia pronunciation is a former Indian cricketer and politician. Mongia has appeared in limited over internationals for India. '
       },
       {
         id: 'AshishNehra',
@@ -230,7 +339,11 @@ const App = () => {
         period: '1999 - 2012',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '201',
+        totalMatchPlayed: '137',
+        description:
+          'Ashish Nehra is a cricket coach and former cricketer who played in all formats of the game. Nehra announced his retirement from all forms of cricket in late 2017, with the Twenty20 International match against New Zealand on 1 November 2017 at Feroz Shah Kotla Ground his last appearance.'
       },
       {
         id: 'ShivSunderDas',
@@ -238,7 +351,11 @@ const App = () => {
         period: '2000-2002',
         role: 'Batsman',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '4',
+        totalMatchPlayed: '27',
+        description:
+          'Shiv Sunder Das is an Indian cricketer and 3rd player from Odisha to represent India. He is a right-handed opening batsman. In first-class cricket he played for Odisha. Das was selected in 2000 for the first intake of the National Cricket Academy in Bangalore. He proceeded to make his Test debut later that year. '
       },
       {
         id: 'DeepDasgupta',
@@ -246,15 +363,23 @@ const App = () => {
         period: '2001-2002',
         role: 'Batsman',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '13',
+        description:
+          'Deep Dasgupta is a former Indian cricketer who played in eight Test matches and five One Day Internationals between 2001 and 2006 as the national wicketkeeper and was later replaced by Ajay Ratra. He is now a Hindi and English commentator.'
       },
       {
         id: 'AjayRatra',
         label: 'Ajay Ratra',
         period: '2001-2002',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '20',
+        description:
+          'Ajay Ratra is a former Indian cricketer. He is a right-handed batsman and wicketkeeper. He made his ODI debut on Jan 19, 2002 against England. Ratra was selected in 2000 for the first intake of the National Cricket Academy in Bangalore. '
       },
       {
         id: 'SanjayBangar',
@@ -262,7 +387,11 @@ const App = () => {
         period: '2001-2004',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '14',
+        totalMatchPlayed: '27',
+        description:
+          'Sanjay Bapusaheb Bangar is an Indian cricket commentator and the head coach of the IPL franchise Royal Challengers Bangalore. He is a former Indian international cricketer. He played as an all-rounder and represented the India national cricket team in Tests and ODIs.'
       },
       {
         id: 'MohammadKaif',
@@ -270,7 +399,11 @@ const App = () => {
         period: '2000 - 2006',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '138',
+        description:
+          'Mohammad Kaif is a former Indian cricketer, who played Tests and ODIs. He made it to the national team on the strength of his performances at the Under-19 level, where he captained the India national under-19 cricket team to victory in the Under-19 World Cup in 2000.'
       },
       {
         id: 'SarandeepSingh',
@@ -278,7 +411,11 @@ const App = () => {
         period: '2000-2003',
         role: 'All-Rounder',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '13',
+        totalMatchPlayed: '8',
+        description:
+          'Sarandeep Singh is an Indian cricketer. He is a right-handed batsman and a right-arm offbreak bowler. In his debut Test match he took six wickets in Nagpur. Singh started his career in Amritsar in 1998–1999, playing for Punjab and before the end of the year, he was playing for the Under-19 squad.'
       },
       {
         id: 'MuraliKartik',
@@ -286,7 +423,11 @@ const App = () => {
         period: '2000-2007',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '61',
+        totalMatchPlayed: '45',
+        description:
+          'Murali Kartik is an Indian cricket commentator and former cricketer who sporadically represented the national team from 2000 to 2007.'
       },
       {
         id: 'TinuYohannan',
@@ -294,7 +435,11 @@ const App = () => {
         period: '2001-2002',
         role: 'Bowler',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '10',
+        totalMatchPlayed: '6',
+        description:
+          'Tinu Yohannan pronunciation is a former Indian cricketer. He is a right-handed fast medium bowler. He played first class cricket for Kerala and was the first Kerala player to play Test and one day cricket for India. He is the current coach of Kerala cricket team. '
       },
       {
         id: 'JaiPrakashYadav',
@@ -302,7 +447,11 @@ const App = () => {
         period: '2000-2004',
         role: 'All-Rounder',
         is_ipl: 'false',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '302',
+        totalMatchPlayed: '142',
+        description:
+          'Jai Prakash Yadav is an Indian cricketer. He is a right-handed batsman and a right-arm medium-pace bowler. Yadav was a member of the Indian team that was one of the joint-winners of the 2002 ICC Champions Trophy, which the title was also shared with Sri Lanka.'
       },
       {
         id: 'LakshmipathyBalaji',
@@ -310,15 +459,23 @@ const App = () => {
         period: '2003-2012',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '61',
+        totalMatchPlayed: '38',
+        description:
+          'Lakshmipathy Balaji is an Indian cricket coach and former cricketer. He is a right arm fast medium bowler. He announced his retirement from first-class and List A cricket in November, 2016. He was the bowling coach for Chennai Super Kings, his former side in the Indian Premier League.'
       },
       {
         id: 'ParthivPatel',
         label: 'Parthiv Patel',
         period: '2002-2011',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '63',
+        description:
+          'Parthiv Ajay Patel is a former Indian professional cricketer, wicketkeeper-batsman, and was a member of the Indian national cricket team. He is a left-handed batsman and played for Gujarat in domestic cricket. '
       },
       {
         id: 'AavishkarSalvi',
@@ -326,7 +483,11 @@ const App = () => {
         period: '2001-2003',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '173',
+        totalMatchPlayed: '66',
+        description:
+          'Aavishkar Madhav Salvi is an Indian cricketer. He is a right-arm medium-pace bowler and right-handed batsman. In first class cricket, he played for Mumbai. His last match for Mumbai was in 2013. He was also part of the Delhi Daredevils setup in the IPL. Salvi is currently the fast bowling coach for Oman. '
       },
       {
         id: 'AmitMishra',
@@ -334,7 +495,11 @@ const App = () => {
         period: '2008-2017',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '164',
+        totalMatchPlayed: '58',
+        description:
+          'Amit Mishra is an Indian cricketer. He is an right-arm leg-break bowler and right-handed tail-ender batsman. He plays for Haryana in the domestic Ranji Trophy and currently appears for the T20 franchise Lucknow Super Giants in the Indian Premier League. In addition, he has represented India in Test, ODIs and T20s.'
       },
       {
         id: 'AbhijitKale',
@@ -342,7 +507,11 @@ const App = () => {
         period: '2003',
         role: 'Batsman',
         is_ipl: 'false',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '3',
+        totalMatchPlayed: '94',
+        description:
+          'Abhijit Vasant Kale is a former Indian cricketer. He was a right-handed batsman and a right-arm offbreak bowler who played 1 ODI match without ever appearing in Tests.'
       },
       {
         id: 'IrfanPathan',
@@ -350,7 +519,11 @@ const App = () => {
         period: '2003 - 2012',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '273',
+        totalMatchPlayed: '149',
+        description:
+          'Irfan Pathan is a former Indian cricketer turned Commentator, Cricket Analyst, Actor and Dancer. He was a bowling all rounder and a member of the Indian cricket team that won the inaugural 2007 ICC Twenty20 World Cup and 2013 ICC Champions Trophy. '
       },
       {
         id: 'RohanGavaskar',
@@ -358,7 +531,11 @@ const App = () => {
         period: '2004',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '39',
+        totalMatchPlayed: '128',
+        description:
+          'Rohan Sunil Gavaskar is a former Indian cricketer. He played in 11 One Day Internationals. He was a middle-order left-handed batsman and an occasional slow left arm orthodox bowler. Rohan is the son of great Indian cricketer Sunil Gavaskar.'
       },
       {
         id: 'RameshPowar',
@@ -366,15 +543,23 @@ const App = () => {
         period: '2004-2007',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '40',
+        totalMatchPlayed: '33',
+        description:
+          "Ramesh Rajaram Powar pronunciation is a former Indian cricketer. Powar was selected in 2000 for the first intake of the National Cricket Academy in Bangalore. and again he was named as India women's cricket team coach in 2021 month of June. "
       },
       {
         id: 'DineshKarthik',
         label: 'Dinesh Karthik',
         period: '2004 - Present',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '120',
+        description:
+          'Krishnakumar Dinesh Karthik is an Indian professional cricketer and commentator who nationally plays for the Indian Cricket Team and currently in Indian Premier League playing for Royal Challengers Bangalore. He is also the current captain of the Tamil Nadu cricket team in domestic cricket.'
       },
       {
         id: 'JoginderSharma',
@@ -382,7 +567,11 @@ const App = () => {
         period: '2004-2007',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '5',
+        totalMatchPlayed: '8',
+        description:
+          'Joginder Sharma is an Indian former professional cricketer who currently serves as a Deputy superintendent of police in the Haryana Police. He has made sporadic appearances for the Indian cricket team. He also played for Chennai Super Kings from 2008 to 2012.'
       },
       {
         id: 'YalakaVenugopalRao',
@@ -390,7 +579,11 @@ const App = () => {
         period: '2005-2006',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '66',
+        totalMatchPlayed: '137',
+        description:
+          'Yalaka Venugopal Rao is an Indian former cricketer. He played as a right-handed middle-order batsman and right arm off-break bowler. He was the first Indian super in One Day International cricket'
       },
       {
         id: 'RPSingh',
@@ -398,7 +591,11 @@ const App = () => {
         period: '2005-2011',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '109',
+        totalMatchPlayed: '72',
+        description:
+          'Rudra Pratap Singh is an Indian former cricketer, who played for the India national cricket team in Test, One Day International and Twenty20 International cricket as a left arm fast-medium bowler. In September 2018, he announced his retirement from all forms of cricket. '
       },
       {
         id: 'SSreesanth',
@@ -406,7 +603,11 @@ const App = () => {
         period: '2005-2011',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '187',
+        totalMatchPlayed: '57',
+        description:
+          'Arvind Sreenath is a former Indian cricketer who played for Karnataka and the Royal Challengers Bangalore. He made his Twenty20 International debut for India against South Africa on 2 October 2015.'
       },
       {
         id: 'MunafPatel',
@@ -414,7 +615,11 @@ const App = () => {
         period: '2006-2011',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '121',
+        totalMatchPlayed: '83',
+        description:
+          'Munaf Patel is a former Indian cricketer who played all formats of the game. He has also played for the West Zone in the Duleep Trophy and Gujarat, Mumbai cricket team and Maharashtra cricket team in domestic arena. In November 2018, he announced his retirement from cricket. He was born in Ikhar, Gujarat, India.'
       },
       {
         id: 'VRVSingh',
@@ -422,15 +627,23 @@ const App = () => {
         period: '2006-2007',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '8',
+        totalMatchPlayed: '7',
+        description:
+          'Vikram Raj Vir Singh, commonly known as VRV Singh, is a former Indian cricketer who was a member of the Indian cricket team. He is a right-arm fast-medium bowler. He is considered one of the few genuine fast bowlers India has produced over the last decade.'
       },
       {
         id: 'RobinUthappa',
         label: 'Robin Uthappa',
         period: '2006-2015',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'trur'
+        is_retired: 'trur',
+        totalWicket: '0',
+        totalMatchPlayed: '59',
+        description:
+          'Robin Venu Uthappa is a former Indian cricketer, who last played for Kerala in domestic cricket & Chennai Super Kings in IPL. He has represented team India in ODIs and T20Is. Uthappa made his One Day International debut in the seventh and final match of the English tour of India in April 2006.'
       },
       {
         id: 'WasimJaffer',
@@ -438,7 +651,11 @@ const App = () => {
         period: '2000-2008',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '2',
+        totalMatchPlayed: '33',
+        description:
+          'Wasim Jaffer is an Indian retired professional cricketer. He was a right-handed opening batsman and an occasional right arm off-break bowler. He is currently the highest run-scorer in Ranji Trophy cricket, surpassing Amol Muzumdar. In November 2018, he became the first batsman to score 11,000 runs in the competition. '
       },
       {
         id: 'PiyushChawla',
@@ -446,7 +663,11 @@ const App = () => {
         period: '2006-2012',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '39',
+        totalMatchPlayed: '28',
+        description:
+          'Piyush Chawla is an Indian cricketer who has played for the India national cricket team. He has also played for the India under-19 team and the Central Zone. He is seen as a leg-spinning all-rounder in domestic cricket. '
       },
       {
         id: 'IshantSharma',
@@ -454,7 +675,11 @@ const App = () => {
         period: '2007 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '426',
+        totalMatchPlayed: '185',
+        description:
+          'Ishant Sharma is an Indian cricketer who has represented India in Tests, ODIs and T20Is. He is a 6 ft 4 in tall right-arm fast-medium bowler. At the age of 18, Sharma was called to join the Indian squad for the tour of South Africa in 2006–07.'
       },
       {
         id: 'PraveenKumar',
@@ -462,7 +687,11 @@ const App = () => {
         period: '2007 - 2012',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '104',
+        totalMatchPlayed: '74',
+        description:
+          'Praveen Kumar is a former Indian cricketer who bowled right-arm medium-pace. In first-class cricket, he played for Uttar Pradesh cricket team. He relied on his ability to swing the ball both ways along with line and length. In October 2018, he announced his retirement from all forms of cricket. '
       },
       {
         id: 'ManojTiwary',
@@ -470,7 +699,11 @@ const App = () => {
         period: '2008 - 2015',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '5',
+        totalMatchPlayed: '15',
+        description:
+          'Manoj Kumar Tiwary is an Indian cricketer and politician. He is a right-handed batsman who bowls occasional leg break. Tiwary represents Bengal in domestic cricket and played for Delhi Daredevils, Kolkata Knight Riders, Kings XI Punjab and Rising Pune Supergiants in the Indian Premier League.'
       },
       {
         id: 'YusufPathan',
@@ -478,7 +711,11 @@ const App = () => {
         period: '2007 - 2012',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '46',
+        totalMatchPlayed: '79',
+        description:
+          'Yusuf Pathan is an Indian former cricketer. Pathan made his debut in first-class cricket in 2001/02. He was a right-handed batsman and a right-arm off-break bowler. His younger brother, Irfan Pathan was also an Indian cricketer. Pathan retired from all forms of cricket in February 2021. '
       },
       {
         id: 'ManpreetGony',
@@ -486,7 +723,11 @@ const App = () => {
         period: '2008 - 2013',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '198',
+        totalMatchPlayed: '63',
+        description:
+          'Manpreet Singh Gony is an Indian cricketer. He is a right-arm medium pace bowler and right-hand middle order batsman. In June 2019, Gony announced his retirement from all forms of cricket, except for short-format leagues played overseas. '
       },
       {
         id: 'PragyanOjha',
@@ -494,7 +735,11 @@ const App = () => {
         period: '2008 - 2013',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '134',
+        totalMatchPlayed: '42',
+        description:
+          'Pragyan Ojha is an Indian former cricketer, who represented India. He played as an attacking slow left arm orthodox bowler and left-handed tail-ender batsman for Hyderabad. He is one of the very few players who have taken more wickets than the runs they have scored in Test cricket.'
       },
       {
         id: 'SubramaniamBadrinath',
@@ -502,7 +747,11 @@ const App = () => {
         period: '2008 - 2012',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '9',
+        description:
+          'Subramaniam Badrinath is a former Indian cricketer. He is a right-handed middle order batsman. Badrinath has represented India in One Day International and test matches. In first class cricket, he captains Vidarbha and was captain of Tamil Nadu earlier. '
       },
       {
         id: 'RavindraJadeja',
@@ -510,7 +759,11 @@ const App = () => {
         period: '2008 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '474',
+        totalMatchPlayed: '248',
+        description:
+          'Ravindrasinh Anirudhsinh Jadeja, commonly known as Ravindra Jadeja, is an Indian international cricketer who represents the Indian national cricket team in all formats. He is an all-rounder, who bats left-handed and bowls left-arm orthodox spin.'
       },
       {
         id: 'AjitAgarkar',
@@ -518,7 +771,11 @@ const App = () => {
         period: '2000 - 2005',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '346',
+        totalMatchPlayed: '217',
+        description:
+          'Ajit Bhalchandra Agarkar pronunciation is a former Indian cricketer and a commentator. He is and has been the chairman of the BCCI selection committee since July 4, 2023. He has represented India in more than 200 international matches across all three formats of the game. '
       },
       {
         id: 'HanumaVihari',
@@ -526,13 +783,19 @@ const App = () => {
         period: '2018 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '32',
+        totalMatchPlayed: '118',
+        description:
+          'Gade Hanuma Vihari is an Indian international cricketer who has played for Indian cricket team. He currently plays for Andhra and captains them in Ranji Trophy. Vihari was a member of India that won test series in Australia in 2018–19 and 2020–21 season.'
       },
       {
         id: 'RahulSanghvi',
         label: 'Rahul Sanghvi',
         period: '2000 - 2001',
-        role: 'Bowler'
+        role: 'Bowler',
+        description:
+          'Rahul Sanghvi is an Indian cricketer, specialising in left arm orthodox spin. He played for the Delhi state team. He played one Test match, which was the first Test between Australia and India in 2001 but was dropped after Australia claimed a 10 wicket victory. He played in 10 One Day Internationals.'
       },
       {
         id: 'AbhishekNayar',
@@ -540,7 +803,11 @@ const App = () => {
         period: '2009 - 2012',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '173',
+        totalMatchPlayed: '106',
+        description:
+          'Abhishek Mohan Nair is a former Indian international cricketer. He is an all-rounder who bats left-handed and bowls right-arm medium pace. He played first class cricket for Mumbai and also represented Mumbai Indians, Kings XI Punjab, Pune Warriors India and Rajasthan Royals in the Indian Premier League.'
       },
       {
         id: 'SudeepTyagi',
@@ -548,7 +815,11 @@ const App = () => {
         period: '2009 - 2010',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '112',
+        totalMatchPlayed: '45',
+        description:
+          'Sudeep Tyagi is an Indian former international cricketer. He is a right arm fast-medium bowler and a right-handed lower order batsman. In first class cricket, he plays for Uttar Pradesh. In the Indian Premier League, he represented Chennai Super Kings.'
       },
       {
         id: 'AbhimanyuMithun',
@@ -556,7 +827,11 @@ const App = () => {
         period: '2010 - 2011',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '12',
+        totalMatchPlayed: '9',
+        description:
+          'Abhimanyu Mithun is an Indian cricketer. A right-arm fast-medium bowler, Mithun was called up to the India squad for the first Test against South Africa in 2009–10, only ten weeks after making his first-class debut. He has also played in the IPL for Royal Challengers Bangalore.'
       },
       {
         id: 'MuraliVijay',
@@ -564,7 +839,11 @@ const App = () => {
         period: '2008 - 2018',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '2',
+        totalMatchPlayed: '78',
+        description:
+          'Murali Vijay is a former Indian international cricketer who plays as a right-handed opening batsman. He was a regular member of the Indian Test team until 2018 and plays for Tamil Nadu in domestic first-class cricket. Vijay was a member of the Indian team that won the 2013 ICC Champions Trophy.'
       },
       {
         id: 'AshokDinda',
@@ -572,7 +851,11 @@ const App = () => {
         period: '2010 - 2013',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '29',
+        totalMatchPlayed: '27',
+        description:
+          'Ashok Dinda is a former Indian cricketer and as of 2021 a Member of the Legislative Assembly. Dinda is a member of the Bharatiya Janata Party and represents the Moyna constituency. He played cricket for Bengal and Goa in the Ranji Trophy and for a variety of Indian Premier League sides.'
       },
       {
         id: 'VinayKumar',
@@ -580,7 +863,11 @@ const App = () => {
         period: '2010 - 2013',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '49',
+        totalMatchPlayed: '32',
+        description:
+          'Ranganath Vinay Kumar is a former cricketer who has represented India at Test, One Day International and Twenty20 levels. He is a right-arm medium fast bowler who played domestic cricket for Karnataka and also in the Indian Premier League for Royal Challengers Bangalore, Mumbai Indians and Kolkata Knight Riders. '
       },
       {
         id: 'UmeshYadav',
@@ -588,7 +875,11 @@ const App = () => {
         period: '2010 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '276',
+        totalMatchPlayed: '132',
+        description:
+          'Umeshkumar Tilak Yadav is an Indian cricketer who currently plays for Vidarbha cricket team, Indian national team, Essex and Kolkata Knight Riders in the Indian Premier League. Yadav was a member of the team that won the 2013 ICC Champions Trophy.'
       },
       {
         id: 'RavichandranAshwin',
@@ -596,15 +887,23 @@ const App = () => {
         period: '2010 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '641',
+        totalMatchPlayed: '208',
+        description:
+          'Ravichandran Ashwin is an Indian international cricketer from Chennai, who plays for the India cricket team. In Indian domestic cricket he plays for Tamil Nadu and Rajasthan Royals. Ashwin is right-arm off-spin bowler.'
       },
       {
         id: 'NamanOjha',
         label: 'Naman Ojha',
         period: '2010 - 2015',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '0',
+        totalMatchPlayed: '2',
+        description:
+          'Naman Vinaykumar Ojha is an Indian former cricketer. He represented India in International cricket. He made his Test debut for India against Sri Lanka on 28 August 2015. He retired from all formats of cricket on 15 February 2021.'
       },
       {
         id: 'PankajSingh',
@@ -612,7 +911,11 @@ const App = () => {
         period: '2010 - 2014',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '2',
+        totalMatchPlayed: '3',
+        description:
+          'Pankaj Singh is an Indian former cricketer. In December 2018, he became the first seam bowler to take 400 wickets in the Ranji Trophy. He retired from all forms of cricket in July 2021. '
       },
       {
         id: 'SaurabhTiwary',
@@ -620,15 +923,23 @@ const App = () => {
         period: '2010 - 2017',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '',
+        totalMatchPlayed: '',
+        description:
+          'Saurabh Sunil Tiwary is an Indian cricketer who plays as a left-handed middle order batsman. He was one of the key batsmen in the Indian team that won the 2008 Under-19 World Cup in Malaysia. '
       },
       {
         id: 'WriddhimanSaha',
         label: 'Wriddhiman Saha',
         period: '2010 - Present',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '49',
+        description:
+          'Wriddhiman Saha is an Indian cricketer who plays for the Indian national cricket team. He is a right-handed wicket-keeper batsman. He is the current first class captain of Tripura Cricket Team in domestic cricket and wicket keeper for Gujarat Titans in the Indian Premier League.'
       },
       {
         id: 'VarunAaron',
@@ -636,7 +947,11 @@ const App = () => {
         period: '2011 - 2015',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '29',
+        totalMatchPlayed: '18',
+        description:
+          'Varun Raymond Aaron is an Indian cricketer from Jamshedpur. A right-arm fast bowler, he first played for Jharkhand U-19 followed by Jharkhand Ranji team. He played his first One Day International for India in October 2011 and made his Test debut the following month.'
       },
       {
         id: 'RahulSharma',
@@ -644,7 +959,11 @@ const App = () => {
         period: '2011 - 2014',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '9',
+        totalMatchPlayed: '6',
+        description:
+          'Rahul Sharma is an Indian cricketer. He is primarily a right-handed legbreak and googly bowler. He has been a member of the Punjab cricket team since 2006. He came into the limelight due to his impressive bowling performances in IPL 2011 for Pune Warriors.'
       },
       {
         id: 'BhuvneshwarKumar',
@@ -652,7 +971,11 @@ const App = () => {
         period: '2012 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '204',
+        totalMatchPlayed: '142',
+        description:
+          'Bhuvneshwar Kumar Singh is an Indian international cricketer who is playing for the Indian cricket team. He currently plays for Sunrisers Hyderabad in the Indian Premier League and Uttar Pradesh in domestic cricket. He is considered to be one of the best and most consistent swing bowlers in the world.'
       },
       {
         id: 'MohammedShami',
@@ -660,7 +983,11 @@ const App = () => {
         period: '2013 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '387',
+        totalMatchPlayed: '153',
+        description:
+          'Mohammed Shami Ahmed is an Indian international cricketer who plays for the Indian national cricket team in all formats of the game as a right-arm fast bowler. He plays domestically for Bengal and, in the Indian Premier League, for Gujarat Titans.'
       },
       {
         id: 'AmbatiRayudu',
@@ -668,7 +995,11 @@ const App = () => {
         period: '2013 - 2019',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '3',
+        totalMatchPlayed: '61',
+        description:
+          'Ambati Thirupathi Rayudu is an Indian former international cricketer. He played 61 limited overs matches for the India national cricket team between 2013 and 2019 and is a right-handed middle-order batsman, who occasionally keeps wicket and bowls right-arm off breaks.'
       },
       {
         id: 'JaydevUnadkat',
@@ -676,7 +1007,11 @@ const App = () => {
         period: '2010 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '11',
+        totalMatchPlayed: '9',
+        description:
+          'Jaydev Dipakbhai Unadkat is an Indian professional cricketer who has played for the Indian national team. He plays for Saurashtra in domestic cricket. He represented India in the Under-19 Cricket World Cup in 2010. '
       },
       {
         id: 'CheteshwarPujara',
@@ -684,7 +1019,11 @@ const App = () => {
         period: '2010 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '108',
+        description:
+          'Cheteshwar Arvind Pujara is an Indian cricketer and is the captain of Sussex County Cricket Club in County Championship. He plays for Saurashtra in Indian domestic cricket. Pujara is known for his disciplined batting style which made him an integral part of the Indian Test team for over a decade.'
       },
       {
         id: 'MohitSharma',
@@ -692,7 +1031,11 @@ const App = () => {
         period: '2013 - 2015',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '37',
+        totalMatchPlayed: '30',
+        description:
+          'Mohit Mahipal Sharma is an Indian international cricketer. He also plays for Haryana. He is a right-arm fast bowler. '
       },
       {
         id: 'StuartBinny',
@@ -700,7 +1043,11 @@ const App = () => {
         period: '2014 - 2016',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '23',
+        totalMatchPlayed: '20',
+        description:
+          'Stuart Terence Roger Binny is an Indian former international cricketer, who had played One Day Internationals, Twenty20 Internationals, and Tests. He played for the Rajasthan Royals in the Indian Premier League. On 30 August 2021, Binny announced his retirement from all formats of cricket.'
       },
       {
         id: 'ParvezRasool',
@@ -708,7 +1055,11 @@ const App = () => {
         period: '2014 - 2014',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '3',
+        totalMatchPlayed: '2',
+        description:
+          'Parvez Ghulam Rasool Zargar is an Indian cricketer who plays as an all-rounder for Jammu and Kashmir. A right-hand batsman and offbreak bowler, Rasool is the captain of the Jammu and Kashmir team and a regular member of India A. He was bought for ₹95 lakh by the Sunrisers Hyderabad in the 2014 IPL auction.'
       },
       {
         id: 'AxarPatel',
@@ -716,7 +1067,11 @@ const App = () => {
         period: '2014 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '108',
+        totalMatchPlayed: '65',
+        description:
+          'Akshar Rajeshbhai Patel, also spelled as Axar Patel, is an Indian international cricketer who plays for the Indian cricket team in all formats of the game as a bowling All-rounder. He also plays for Gujarat in domestic cricket and for the Delhi Capitals in the Indian Premier League. '
       },
       {
         id: 'DhawalKulkarni',
@@ -724,7 +1079,11 @@ const App = () => {
         period: '2014 - 2017',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '22',
+        totalMatchPlayed: '14',
+        description:
+          'Dhawal Sunil Kulkarni is an Indian cricketer as well as first class cricketer. He is a right arm medium-pace bowler and right-handed lower order batsman. '
       },
       {
         id: 'KarnSharma',
@@ -732,7 +1091,11 @@ const App = () => {
         period: '2014 - 2018',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '',
+        totalMatchPlayed: '',
+        description:
+          'Karan Sharma is an Indian cricketer. He made his Twenty20 debut on 10 January 2021, for Uttar Pradesh in the 2020–21 Syed Mushtaq Ali Trophy. He made his List A debut on 20 February 2021, for Uttar Pradesh in the 2020–21 Vijay Hazare Trophy.'
       },
       {
         id: 'KedarJadhav',
@@ -740,7 +1103,11 @@ const App = () => {
         period: '2014 - 2021',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '27',
+        totalMatchPlayed: '82',
+        description:
+          'Kedar Mahadev Jadhav is an Indian cricketer who plays for Maharashtra, Kolhapur Tuskers and Royal Challengers Bangalore in domestic cricket. He has also played for the Indian national cricket team. He is a right hand batter, who occasionally keeps wickets and bowls right-arm-offspin'
       },
       {
         id: 'ManishPandey',
@@ -748,7 +1115,11 @@ const App = () => {
         period: '2015 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '68',
+        description:
+          'Manish Krishnanand Pandey is an Indian international cricketer. He is primarily a right-handed middle-order batsman representing Karnataka in domestic cricket and Delhi Capitals in the Indian Premier League.'
       },
       {
         id: 'BarinderSran',
@@ -756,7 +1127,11 @@ const App = () => {
         period: '2016 - 2016',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '39',
+        totalMatchPlayed: '17',
+        description:
+          'Barinder Sran is an Indian international cricketer. He is a left-arm medium-fast bowler who plays for Chandigarh in domestic cricket and Mumbai Indians in the IPL. He was a member of the Rajasthan Royals squad in the 2015 Indian Premier League.'
       },
       {
         id: 'RishiDhawan',
@@ -764,7 +1139,11 @@ const App = () => {
         period: '2016 - 2016',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '2',
+        totalMatchPlayed: '4',
+        description:
+          'Rishi Dhawan is an Indian cricketer who plays first-class and List A cricket for Himachal Pradesh. Dhawan is primarily a medium-fast bowling all-rounder who bats in the middle-order. Dhawan has played for Kings XI Punjab in the 2008 IPL. He was signed-up by the Mumbai Indians in 2013.'
       },
       {
         id: 'GurkeeratSingh',
@@ -772,7 +1151,11 @@ const App = () => {
         period: '2015 - 2019',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '41',
+        totalMatchPlayed: '52',
+        description:
+          'Gurkeerat Singh Mann is an Indian professional cricketer who plays for Punjab in domestic cricket. A right-handed batsman and off break bowler, he is a member of the Gujarat Titans in IPL and a regular in India A team. Singh had a maiden call for the official Indian squad for the South Africa series in 2015.'
       },
       {
         id: 'JaspritBumrah',
@@ -780,7 +1163,11 @@ const App = () => {
         period: '2016 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '271',
+        totalMatchPlayed: '108',
+        description:
+          'Jasprit Jasbirsingh Bumrah is an Indian international cricketer who plays for the Indian cricket team in all formats of the game. A right-arm fast bowler with a unique bowling action, Bumrah is considered one of the best bowlers in the world.'
       },
       {
         id: 'YuzvendraChahal',
@@ -788,7 +1175,11 @@ const App = () => {
         period: '2016 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '212',
+        totalMatchPlayed: '147',
+        description:
+          'Yuzvendra Chahal is an Indian international cricketer who plays for the Indian cricket team in white ball cricket as a leg spin bowler. He also currently plays for Haryana in domestic cricket and Rajasthan Royals in the Indian Premier League. He is a Right-arm leg break bowler.'
       },
       {
         id: 'KarunNair',
@@ -796,7 +1187,11 @@ const App = () => {
         period: '2016 - 2018',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '8',
+        description:
+          'Karun Kaladharan Nair is an Indian international cricketer who plays for Karnataka in domestic cricket and Lucknow Super Giants in Indian Premier League. He is a right-handed top order batter and occasional off break bowler. He is only the second Indian batter to score a triple century in Test cricket.'
       },
       {
         id: 'FaizFazal',
@@ -804,7 +1199,11 @@ const App = () => {
         period: '2016 - 2016',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'true'
+        is_retired: 'true',
+        totalWicket: '23',
+        totalMatchPlayed: '113',
+        description:
+          'Faiz Yakub Fazal is an Indian cricketer who plays for the Vidarbha cricket team and Lisburn Cricket Club, Northern Ireland, having previously played for Central Zone, India Red, India Under-19s, Railways, and Rajasthan Royals. He is a left-handed opening batsman. '
       },
       {
         id: 'JayantYadav',
@@ -812,7 +1211,11 @@ const App = () => {
         period: '2016 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '16',
+        totalMatchPlayed: '8',
+        description:
+          'Jayant Yadav is an Indian cricketer from Delhi who plays for Haryana and Middlesex in domestic cricket. He is an off spin bowler who bats right-handed. He made his international debut in October 2016.'
       },
       {
         id: 'KuldeepYadav',
@@ -820,7 +1223,11 @@ const App = () => {
         period: '2017 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '184',
+        totalMatchPlayed: '96',
+        description:
+          'Kuldeep Yadav is an Indian international cricketer. He is a bowling all-rounder who bowls Left-arm Unorthodox spin bowler is and a capable Lower order batter who plays for India and for Uttar Pradesh in domestic cricket. He was signed by the Delhi Capitals for the Indian Premier League.'
       },
       {
         id: 'ShardulThakur',
@@ -828,7 +1235,11 @@ const App = () => {
         period: '2016 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '79',
+        totalMatchPlayed: '43',
+        description:
+          'Shardul Narendra Thakur is an Indian international cricketer. He is a bowler who bats right-handed and bowls right arm medium pace. '
       },
       {
         id: 'ShreyasIyer',
@@ -836,23 +1247,23 @@ const App = () => {
         period: '2017 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '54',
+        description:
+          'Shreyas Santosh Iyer is an Indian international cricketer who plays for the Indian cricket team as a right-handed batter. He has played in all formats for the Indian team.'
       },
-      // {
-      //   id: 'WashingtonSundar',
-      //   label: 'Washington Sundar',
-      //   period: '2017 - Present',
-      //   role: 'All-Rounder',
-      //   is_ipl: 'true',
-      //   is_retired: 'false'
-      // },
       {
         id: 'SiddarthKaul',
         label: 'Siddarth Kaul',
         period: '2018 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '3',
+        totalMatchPlayed: '5',
+        description:
+          'Siddarth Kaul, also spelled Siddharth Kaul, is an Indian professional cricketer. A fast bowler who bowls at about 130 km/h, he made his first-class debut for Punjab in 2007. '
       },
       {
         id: 'KhaleelAhmed',
@@ -860,7 +1271,11 @@ const App = () => {
         period: '2018 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '28',
+        totalMatchPlayed: '25',
+        description:
+          'Khaleel Ahmed is an Indian international cricketer. He made his debut for Indian cricket team in September 2018.'
       },
       {
         id: 'DeepakChahar',
@@ -868,15 +1283,23 @@ const App = () => {
         period: '2018 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '39',
+        totalMatchPlayed: '31',
+        description:
+          'Deepak Chahar is an Indian international cricketer. He is a right-arm medium pace swing bowler, who plays for Rajasthan in domestic cricket and Chennai Super Kings in the Indian Premier League. In 2019, he became the first Indian male cricketer to take a hat-trick in a Twenty20 International match.'
       },
       {
         id: 'RishabhPant',
         label: 'Rishabh Pant',
         period: '2017 - Present',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '63',
+        description:
+          'Rishabh Rajendra Pant is an Indian international cricketer who plays for the Indian cricket team as a wicket-keeper batter. Having played all formats for India, he is best known for his consistency to score runs in Test cricket.'
       },
       {
         id: 'MohammedSiraj',
@@ -884,7 +1307,11 @@ const App = () => {
         period: '2017 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '112',
+        totalMatchPlayed: '50',
+        description:
+          'Mohammed Siraj is an Indian international cricketer joined Indian national cricket team in 2018 as a Right-arm fast bowler. He plays for Royal Challengers Bangalore in the Indian Premier League and Hyderabad in domestic cricket.'
       },
       {
         id: 'VijayShankar',
@@ -892,7 +1319,11 @@ const App = () => {
         period: '2018 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '9',
+        totalMatchPlayed: '21',
+        description:
+          'Vijay Shankar is an Indian cricketer who plays for the Tamil Nadu state cricket team. He is an all-rounder who bats right-handed and bowls right-arm medium pace. He played for India in 2019 Cricket World Cup, where he became the first Indian to pick up a wicket on the very first ball of his World Cup debut.'
       },
       {
         id: 'ShubmanGill',
@@ -900,7 +1331,11 @@ const App = () => {
         period: '2019 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '52',
+        description:
+          'Shubman Gill is an Indian cricketer. Representing Indian cricket team at the international level, he also plays for Gujarat Titans in the Indian Premier League and Punjab in domestic cricket.'
       },
       {
         id: 'ShivamDube',
@@ -908,7 +1343,11 @@ const App = () => {
         period: '2019 - present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '46',
+        totalMatchPlayed: '123',
+        description:
+          'Shivam Dube is an Indian cricketer who plays for Mumbai in domestic cricket and the Chennai Super Kings in the Indian Premier League. He is an all-rounder who bats left-handed and bowls right-arm at medium pace. He made his international debut for the India cricket team in November 2019.'
       },
       {
         id: 'NavdeepSaini',
@@ -916,7 +1355,11 @@ const App = () => {
         period: '2019 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '',
+        totalMatchPlayed: '',
+        description:
+          'Navdeep Amarjeet Saini is an Indian cricketer, born in Karnal, Haryana. He has played for Delhi since 2013. He made his international debut for the India cricket team in August 2019.'
       },
       {
         id: 'MayankAgarwal',
@@ -924,7 +1367,11 @@ const App = () => {
         period: '2018 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '24',
+        description:
+          'Mayank Anurag Agarwal is an Indian international cricketer who plays as a right-handed top-order batter. He plays for Karnataka cricket team in domestic cricket. He made his international debut for the India cricket team on 26 December 2018 against Australia at the MCG'
       },
       {
         id: 'PrithviShaw',
@@ -932,7 +1379,11 @@ const App = () => {
         period: '2018 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '11',
+        description:
+          'Prithvi Pankaj Shaw is an Indian cricketer who has played for the Indian cricket team in all formats. In domestic cricket, he plays for Mumbai and Delhi Capitals. Under his captaincy, the Indian team won the 2018 Under-19 World Cup. '
       },
       {
         id: 'TNatarajan',
@@ -940,7 +1391,11 @@ const App = () => {
         period: '2020 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '13',
+        totalMatchPlayed: '7',
+        description:
+          'Thangarasu Natarajan is an Indian international cricketer. He made his debut for the India cricket team in December 2020. Currently he plays for Sunrisers Hyderabad in the Indian Premier League and for Tamil Nadu in domestic cricket. '
       },
       {
         id: 'KrunalPandya',
@@ -948,7 +1403,11 @@ const App = () => {
         period: '2018 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '126',
+        totalMatchPlayed: '179',
+        description:
+          'Krunal Himanshu Pandya is an Indian international cricketer also he is the elder brother of Hardik Pandya who has played for Indian cricket team but currently plays for Baroda in domestic cricket and Lucknow Super Giants in the IPL. He is an all-rounder who bats left-handed and bowls slow left-arm orthodox.'
       },
       {
         id: 'PrasidhKrishna',
@@ -956,15 +1415,23 @@ const App = () => {
         period: '2021 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '29',
+        totalMatchPlayed: '16',
+        description:
+          'Muralikrishna Prasidh Krishna is an Indian international cricketer who plays for Indian national cricket team. He also plays for Karnataka in domestic cricket and Rajasthan Royals in the Indian Premier League. He is a right-arm fast bowler who bowls consistently at speeds above 145kmph.'
       },
       {
         id: 'IshanKishan',
         label: 'Ishan Kishan',
         period: '2020 - Present',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '20',
+        description:
+          'Ishan Kishan is an Indian international cricketer who plays for the Indian national cricket team as a wicket-keeper batsman. He made his international debut in March 2021 against England. He plays for Mumbai Indians in the Indian Premier League and for Jharkhand in domestic cricket.'
       },
       {
         id: 'SuryakumarYadav',
@@ -972,7 +1439,11 @@ const App = () => {
         period: '2021 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '81',
+        description:
+          'Suryakumar Ashok Yadav is an Indian international cricketer who represents the Indian cricket team in ODI & T20I Formats. For his exceptional batting performances in T20 cricket, he is widely considered as one of the best in this format in the current times.'
       },
       {
         id: 'RahulChahar',
@@ -980,7 +1451,11 @@ const App = () => {
         period: '2019 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '10',
+        totalMatchPlayed: '7',
+        description:
+          'Rahul Desraj Chahar is an Indian cricketer who plays for Rajasthan in domestic cricket and Punjab Kings in the Indian Premier League. He made his international debut for India in August 2019.'
       },
       {
         id: 'KrishnappaGowtham',
@@ -988,7 +1463,11 @@ const App = () => {
         period: '2017 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '32',
+        totalMatchPlayed: '49',
+        description:
+          'Krishnappa Gowtham is an Indian cricketer who plays for Karnataka. He made his international debut for India in July 2021. His father M. Krishnappa represented Karnataka in kabaddi.'
       },
       {
         id: 'NitishRana',
@@ -996,7 +1475,11 @@ const App = () => {
         period: '2016 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '29',
+        totalMatchPlayed: '153',
+        description:
+          'Nitish Rana is an Indian cricketer who is the captain of Delhi in domestic cricket and Kolkata Knight Riders in the Indian Premier League. He is an attacking left-handed batsman and an effective off spin bowler. '
       },
       {
         id: 'ChetanSakariya',
@@ -1004,15 +1487,23 @@ const App = () => {
         period: '2021 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '',
+        totalMatchPlayed: '',
+        description:
+          'Chetan Sakariya is an Indian international cricketer who has played for Indian cricket team but currently plays for Saurashtra in domestic cricket. He made his international debut for the India cricket team in July 2021.'
       },
       {
         id: 'SanjuSamson',
         label: 'Sanju Samson',
         period: '2015 - Present',
-        role: 'Wicketkeeper-Batsman',
+        role: 'Wicketkeeper',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '254',
+        description:
+          'Sanju Viswanath Samson is an Indian international cricketer, who captains Kerala in domestic cricket, Kerala Tigers in Kerala Premier League T20 and Rajasthan Royals in the Indian Premier League.'
       },
       {
         id: 'VenkateshIyer',
@@ -1020,7 +1511,11 @@ const App = () => {
         period: '2021 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '5',
+        totalMatchPlayed: '11',
+        description:
+          'Venkatesh Iyer is an Indian cricketer who plays for Madhya Pradesh in domestic cricket and Kolkata Knight Riders in the Indian Premier League.'
       },
       {
         id: 'DeepakHooda',
@@ -1028,7 +1523,11 @@ const App = () => {
         period: '2016 - present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '8',
+        totalMatchPlayed: '14',
+        description:
+          'Deepak Jagbir Hooda is an Indian International cricketer who plays for the Indian cricket team. He also plays in the Indian Premier League for Lucknow Super Giants and Rajasthan in the domestic cricket. He is an all-rounder who bats right-handed and bowls right-arm off break.'
       },
       {
         id: 'AveshKhan',
@@ -1036,7 +1535,11 @@ const App = () => {
         period: '2021 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '97',
+        totalMatchPlayed: '77',
+        description:
+          "Avesh Khan is an Indian international cricketer. In December 2015 he was named in India's squad for the 2016 Under-19 Cricket World Cup. He made his international debut for the Indian cricket team in February 2022. "
       },
       {
         id: 'RuturajGaikwad',
@@ -1044,23 +1547,23 @@ const App = () => {
         period: '2020 - Present',
         role: 'Batsman',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '0',
+        totalMatchPlayed: '14',
+        description:
+          'Ruturaj Dashrat Gaikwad is an Indian international cricketer who plays for Maharashtra team in domestic cricket and for the Chennai Super Kings in the Indian Premier League. He made his international debut for the India cricket team in July 2021 against Sri Lanka. He was the leading run-scorer in the 2021 IPL season. '
       },
-      // {
-      //   id: 'RaviBishnoi',
-      //   label: 'Ravi Bishnoi',
-      //   period: '2020 - Present',
-      //   role: 'Bowler',
-      //   is_ipl: 'true',
-      //   is_retired: 'false'
-      // },
       {
         id: 'ShahbazAhmed',
         label: 'Shahbaz Ahmed',
         period: '2021 - Present',
         role: 'All-Rounder',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '49',
+        totalMatchPlayed: '65',
+        description:
+          'Shahbaz Ahmed is an Indian international cricketer who plays for the Indian cricket team. He made his international debut on 9 October, 2022. He plays for Royal Challengers Bangalore in the Indian Premier League and Bengal in domestic cricket. He is a bowling all-rounder who bats left-handed. '
       },
       {
         id: 'ArshdeepSingh',
@@ -1068,7 +1571,11 @@ const App = () => {
         period: '2019 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '41',
+        totalMatchPlayed: '29',
+        description:
+          'Arshdeep Singh is an Indian professional cricketer who plays for the India national cricket team. In Indian domestic cricket, he plays for Punjab and for Punjab Kings in the Indian Premier League. Arshdeep is a left-arm medium-fast bowler and left-handed lower order batter. '
       },
       {
         id: 'UmranMalik',
@@ -1076,7 +1583,11 @@ const App = () => {
         period: '2021 - Present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '24',
+        totalMatchPlayed: '18',
+        description:
+          'Umran Malik is an Indian international cricketer who plays for the Indian cricket team in limited-overs cricket as a right-arm fast bowler. He debuted for India in June 2022 against Ireland. He plays for Sunrisers Hyderabad in Indian Premier League and Jammu and Kashmir in domestic cricket'
       },
       {
         id: 'RaviBishnoi',
@@ -1084,7 +1595,11 @@ const App = () => {
         period: '2023-present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '17',
+        totalMatchPlayed: '11',
+        description:
+          'Ravi Bishnoi is an Indian international cricketer. He plays for the Indian cricket team in white ball cricket. He is a Right-arm leg-break bowler. He made his International debut in February 2022. He plays for Lucknow Super Giants in the Indian Premier League and Rajasthan in domestic cricket.'
       },
       {
         id: 'KuldeepSen',
@@ -1092,9 +1607,14 @@ const App = () => {
         period: '2022-present',
         role: 'Bowler',
         is_ipl: 'true',
-        is_retired: 'false'
+        is_retired: 'false',
+        totalWicket: '',
+        totalMatchPlayed: '',
+        description:
+          'Kuldeep Rampal Sen is an Indian international cricketer who plays for Madhya Pradesh in domestic cricket and Rajasthan Royals in Indian Premier League. He is a Right-Arm Fast Bowler bowler who regularly bowls speeds above 145kmph. '
       }
     ],
+  
     links: [
       // cap1 AnilKumble
       { source: 'AnilKumble', target: 'HarbhajanSingh' },
@@ -1116,7 +1636,7 @@ const App = () => {
       { source: 'AnilKumble', target: 'MohammadKaif' },
       { source: 'AnilKumble', target: 'SarandeepSingh' },
       { source: 'AnilKumble', target: 'MSDhoni' },
-
+  
       // Cap2 RahulDravid
       { source: 'RahulDravid', target: 'MSDhoni' },
       { source: 'RahulDravid', target: 'SouravGanguly' },
@@ -1132,7 +1652,7 @@ const App = () => {
       { source: 'RahulDravid', target: 'MunafPatel' },
       { source: 'RahulDravid', target: 'SSreesanth' },
       { source: 'RahulDravid', target: 'SachinTendulkar' },
-
+  
       // Cap3 MSDhoni
       { source: 'MSDhoni', target: 'VirenderSehwag' },
       { source: 'MSDhoni', target: 'ShikharDhawan' },
@@ -1234,7 +1754,7 @@ const App = () => {
       { source: 'MSDhoni', target: 'RaviBishnoi' },
       { source: 'MSDhoni', target: 'ArshdeepSingh' },
       { source: 'MSDhoni', target: 'HarbhajanSingh' },
-
+  
       // Cap4 SureshRaina
       { source: 'SureshRaina', target: 'HarbhajanSingh' },
       { source: 'SureshRaina', target: 'VirenderSehwag' },
@@ -1294,7 +1814,7 @@ const App = () => {
       { source: 'SureshRaina', target: 'RahulChahar' },
       { source: 'SureshRaina', target: 'DeepakHooda' },
       // Cap5 GautamGambhir
-
+  
       { source: 'GautamGambhir', target: 'HarbhajanSingh' },
       { source: 'GautamGambhir', target: 'JavagalSrinath' },
       { source: 'GautamGambhir', target: 'VirenderSehwag' },
@@ -1344,7 +1864,7 @@ const App = () => {
       { source: 'GautamGambhir', target: 'PankajSingh' },
       { source: 'GautamGambhir', target: 'WriddhimanSaha' },
       { source: 'GautamGambhir', target: 'CheteshwarPujara' },
-
+  
       // Cap6 ViratKohli
       { source: 'ViratKohli', target: 'HarbhajanSingh' },
       { source: 'ViratKohli', target: 'VirenderSehwag' },
@@ -1433,7 +1953,7 @@ const App = () => {
       { source: 'ViratKohli', target: 'ArshdeepSingh' },
       { source: 'ViratKohli', target: 'UmranMalik' },
       { source: 'ViratKohli', target: 'KuldeepSen' },
-
+  
       // Cap7 AjinkyaRahane
       { source: 'AjinkyaRahane', target: 'HarbhajanSingh' },
       { source: 'AjinkyaRahane', target: 'VirenderSehwag' },
@@ -1524,7 +2044,7 @@ const App = () => {
       { source: 'AjinkyaRahane', target: 'ArshdeepSingh' },
       { source: 'AjinkyaRahane', target: 'UmranMalik' },
       { source: 'AjinkyaRahane', target: 'KuldeepSen' },
-
+  
       // Cap8 RohitSharma
       { source: 'RohitSharma', target: 'HarbhajanSingh' },
       { source: 'RohitSharma', target: 'VirenderSehwag' },
@@ -1611,7 +2131,7 @@ const App = () => {
       { source: 'RohitSharma', target: 'UmranMalik' },
       { source: 'RohitSharma', target: 'RaviBishnoi' },
       { source: 'RohitSharma', target: 'KuldeepSen' },
-
+  
       // Cap9 ShikharDhawan
       { source: 'ShikharDhawan', target: 'HarbhajanSingh' },
       { source: 'ShikharDhawan', target: 'VirenderSehwag' },
@@ -1738,7 +2258,7 @@ const App = () => {
       { source: 'KL_Rahul', target: 'UmranMalik' },
       { source: 'KL_Rahul', target: 'RaviBishnoi' },
       { source: 'KL_Rahul', target: 'KuldeepSen' },
-
+  
       // Cap11 HardikPandya
       { source: 'HardikPandya', target: 'HarbhajanSingh' },
       { source: 'HardikPandya', target: 'ShikharDhawan' },
@@ -1800,9 +2320,9 @@ const App = () => {
       { source: 'HardikPandya', target: 'UmranMalik' },
       { source: 'HardikPandya', target: 'RaviBishnoi' },
       { source: 'HardikPandya', target: 'KuldeepSen' },
-
+  
       // Cap12 SouravGanguly
-
+  
       { source: 'SouravGanguly', target: 'RahulDravid' },
       { source: 'SouravGanguly', target: 'VirenderSehwag' },
       { source: 'SouravGanguly', target: 'VVSLaxman' },
@@ -1819,7 +2339,7 @@ const App = () => {
       { source: 'SouravGanguly', target: 'RahulSanghvi' },
       { source: 'SouravGanguly', target: 'HemangBadani' },
       { source: 'SouravGanguly', target: 'SachinTendulkar' },
-
+  
       // Cap 13
       { source: 'SachinTendulkar', target: 'HarbhajanSingh' },
       { source: 'SachinTendulkar', target: 'JavagalSrinath' },
@@ -1882,7 +2402,7 @@ const App = () => {
       { source: 'SachinTendulkar', target: 'NamanOjha' },
       { source: 'SachinTendulkar', target: 'PankajSingh' },
       { source: 'SachinTendulkar', target: 'WriddhimanSaha' },
-
+  
       // Cap14
       { source: 'VirenderSehwag', target: 'HarbhajanSingh' },
       { source: 'VirenderSehwag', target: 'JavagalSrinath' },
@@ -1956,6 +2476,7 @@ const App = () => {
   const [selectedNode2Size, setSelectedNode2Size] = useState(3);
   const [selectedNode3Size, setSelectedNode3Size] = useState(3);
   const [selectedNode4Size, setSelectedNode4Size] = useState(10);
+  const [hoveredLink, setHoveredLink] = useState(null);
   const [filteredNodesByRole, setFilteredNodesByRole] = useState({
     'Batsman': [],
     'Bowler': [],
@@ -2378,6 +2899,7 @@ const App = () => {
         onLinkHover={handleLinkHover}
         backgroundColor='white'
         linkColor={() => 'blue'}
+        linkWidth={0.2} 
       />
       {
         <div className='node-info'>
@@ -2397,6 +2919,9 @@ const App = () => {
               <div className='node-info-content'>
                 <h2>Clicked Node: ( Captian )</h2>
                 <p style={{ color: 'blue', fontSize: '20px' }}>{clickedNodeInfo.node.label}</p>
+                <p style={{ color: '#000', fontSize: '14px' }}>{clickedNodeInfo.node.description}</p>
+                <p style={{ color: '#000', fontSize: '14px' ,fontWeight:'500'}}>Total Wicket {clickedNodeInfo.node.totalWicket}</p>
+                <p style={{ color: '#000', fontSize: '14px',fontWeight:'500' }}>Total Match Played {clickedNodeInfo.node.totalMatchPlayed}</p>
 
                 <h3>Lined Nodes: ( Players )
                   <div className="range-input-container">

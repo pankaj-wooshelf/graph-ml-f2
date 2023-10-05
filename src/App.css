@@ -271,3 +271,26 @@ scrollbar-color: #888 #f1f1f1; /* Set handle and track colors */
   box-sizing: border-box;
   float: left; /* Float it to the left */
 }
+
+/* Initially hide the side box */
+#side-box {
+  display: none;
+  width: 200px; /* Adjust the width as needed */
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  right: -200px; /* Hide the box off-screen initially */
+  height: 100%;
+  transition: right 0.3s ease-in-out;
+}
+
+/* Style for the list items */
+.node {
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Highlight the list item when hovered */
+.node:hover {
+  background-color: #fff;
+}
