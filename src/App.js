@@ -12,22 +12,23 @@ const App = () => {
     y: 0,
     description: "",
   });
-  
+
   const handleMouseEnter = (e) => {
     const description = e.currentTarget.getAttribute("data-description");
+    const totalMatchPlayed = e.currentTarget.getAttribute("data-total-match-played");
+    const totalWicket = e.currentTarget.getAttribute("data-total-wicket");
     if (description) {
       const x = e.clientX + 10;
-      const y = e.clientY - 10 + window.scrollY; // Adjust for scroll position
-      setTooltip({ visible: true, x, y, description });
+      const y = e.clientY - 10 + window.scrollY; 
+      setTooltip({ visible: true, x, y, description,totalMatchPlayed, totalWicket });
     }
     e.currentTarget.style.color = "blue";
   };
-  
+
   const handleMouseLeave = (e) => {
     setTooltip({ ...tooltip, visible: false });
     e.currentTarget.style.color = "";
   };
-  
 
   const graphDatas = {
     nodes: [
@@ -3043,8 +3044,11 @@ const App = () => {
                         node,
                         highlightedNode,
                         updatedGraphData.links
-                      )}
+                      )
+                    }
                       data-description={node.description}
+                      data-total-match-played={node.totalMatchPlayed} 
+                      data-total-wicket={node.totalWicket} 
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       // style={{ cursor: "pointer" }}
@@ -3092,6 +3096,8 @@ const App = () => {
                             updatedGraphData.links
                           )}
                           data-description={node.description}
+                          data-total-match-played={node.totalMatchPlayed} 
+                          data-total-wicket={node.totalWicket} 
                           onMouseEnter={handleMouseEnter}
                           onMouseLeave={handleMouseLeave}
                           // style={{ cursor: "pointer" }}
@@ -3132,6 +3138,8 @@ const App = () => {
                     <li
                       key={node.id}
                       data-description={node.description}
+                      data-total-match-played={node.totalMatchPlayed} 
+                      data-total-wicket={node.totalWicket} 
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       style={{ cursor: "pointer" }}
@@ -3143,7 +3151,7 @@ const App = () => {
                 </ul>
               </div>
             )}
-               {tooltip.visible && (
+            {tooltip.visible && (
               <div
                 className="custom-tooltip"
                 style={{
@@ -3160,6 +3168,16 @@ const App = () => {
                 }}
               >
                 {tooltip.description}
+                <p
+                  style={{ color: "#000", fontSize: "14px", fontWeight: "500" }}
+                >
+                  Total Wicket :{tooltip.totalWicket}
+                </p>
+                <p
+                  style={{ color: "#000", fontSize: "14px", fontWeight: "500" }}
+                >
+                  Total Match Played : {tooltip.totalMatchPlayed}
+                </p>
               </div>
             )}
 
@@ -3177,11 +3195,14 @@ const App = () => {
                       }}
                     >
                       {filteredNodesByRole.Bowler.map((node) => (
-                        <li key={node.id}
-                        data-description={node.description}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        style={{ cursor: "pointer" }}
+                        <li
+                          key={node.id}
+                          data-description={node.description}
+                          data-total-match-played={node.totalMatchPlayed} 
+                          data-total-wicket={node.totalWicket} 
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                          style={{ cursor: "pointer" }}
                         >
                           {node.label}
                           {`  ( ${node.role} )`}
@@ -3205,11 +3226,14 @@ const App = () => {
                     }}
                   >
                     {allRounderNodes.map((node) => (
-                      <li key={node.id}
-                      data-description={node.description}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                      style={{ cursor: "pointer" }}
+                      <li
+                        key={node.id}
+                        data-description={node.description}
+                        data-total-match-played={node.totalMatchPlayed} 
+                        data-total-wicket={node.totalWicket} 
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        style={{ cursor: "pointer" }}
                       >
                         {node.label}
                         {`  ( ${node.role} )`}
@@ -3236,6 +3260,8 @@ const App = () => {
                       <li
                         key={node.id}
                         data-description={node.description}
+                        data-total-match-played={node.totalMatchPlayed} 
+                        data-total-wicket={node.totalWicket} 
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         style={{ cursor: "pointer" }}
@@ -3262,11 +3288,14 @@ const App = () => {
                       }}
                     >
                       {filteredNodesByRole.Wicketkeeper.map((node) => (
-                        <li key={node.id}
-                        data-description={node.description}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        style={{ cursor: "pointer" }}
+                        <li
+                          key={node.id}
+                          data-description={node.description}
+                          data-total-match-played={node.totalMatchPlayed} 
+                          data-total-wicket={node.totalWicket} 
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                          style={{ cursor: "pointer" }}
                         >
                           {node.label}
                           {`  ( ${node.role} )`}
@@ -3292,11 +3321,14 @@ const App = () => {
                     }}
                   >
                     {iplTrue.map((node) => (
-                      <li key={node.id}
-                      data-description={node.description}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                      style={{ cursor: "pointer" }}
+                      <li
+                        key={node.id}
+                        data-description={node.description}
+                        data-total-match-played={node.totalMatchPlayed} 
+                        data-total-wicket={node.totalWicket} 
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        style={{ cursor: "pointer" }}
                       >
                         {node.label}
                         {`  ( ${node.role} )`}
@@ -3320,11 +3352,14 @@ const App = () => {
                     }}
                   >
                     {retiredTrue.map((node) => (
-                      <li key={node.id}
-                      data-description={node.description}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                      style={{ cursor: "pointer" }}
+                      <li
+                        key={node.id}
+                        data-description={node.description}
+                        data-total-match-played={node.totalMatchPlayed} 
+                        data-total-wicket={node.totalWicket} 
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        style={{ cursor: "pointer" }}
                       >
                         {node.label}
                         {`  ( ${node.role} )`}
