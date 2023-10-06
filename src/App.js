@@ -4,6 +4,7 @@ import "./App.css";
 import "./Header.css";
 import Select from "react-select";
 // import { graphDatas } from './Data/testData'
+import { graphDatas } from "./Data/testData";
 
 const App = () => {
   const [tooltip, setTooltip] = useState({
@@ -12,7 +13,9 @@ const App = () => {
     y: 0,
     description: "",
   });
-
+  useEffect(() => {
+    console.log(graphDatas,"pankajjj");
+  }, []);
   const handleMouseEnter = (e) => {
     const description = e.currentTarget.getAttribute("data-description");
     const totalMatchPlayed = e.currentTarget.getAttribute("data-total-match-played");
@@ -3157,6 +3160,7 @@ const App = () => {
                 style={{
                   left: `${tooltip.x}px`,
                   top: `${tooltip.y}px`,
+                  width: "100%",
                   background: "white",
                   border: "2px solid hsl(0, 0%, 80%)",
                   position: "absolute",
